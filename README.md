@@ -9,6 +9,21 @@
 
 ## Soal 1
 Untuk mempersiapkan pembuatan entitas selain mereka, Eru yang berperan sebagai Router membuat dua Switch/Gateway. Dimana Switch 1 akan menuju ke dua Ainur yaitu Melkor dan Manwe. Sedangkan Switch 2 akan menuju ke dua Ainur lainnya yaitu Varda dan Ulmo. Keempat Ainur tersebut diberi perintah oleh Eru untuk menjadi Client.
+<img width="842" height="641" alt="Image" src="https://github.com/user-attachments/assets/bd38db14-ed1b-4872-9e21-368150fdcf06" />
+
+## Soal 2
+Untuk menghubungkan eru ke internet, kita dapat menyambungkan client Eru ke NAT dan mengubah configure Eru menjadi:
+
+<img width="499" height="162" alt="Image" src="https://github.com/user-attachments/assets/91861cfd-644d-48b9-b2ad-8a05307f1088" />
+
+Untuk membuktikan kalau Eru sudah terhubung dengan internet, kita dapat melakukan ping kepada suatu situs seperti youtube.com, google.com, dll.
+
+<img width="1244" height="159" alt="Image" src="https://github.com/user-attachments/assets/c70368fd-2582-4628-ab1e-5508d88b6d5e" />
+
+## Soal 3
+Disini kita sudah berhasil menyambungkan setiap client satu sama lain.
+
+<img width="809" height="447" alt="Image" src="https://github.com/user-attachments/assets/6ead7dff-b250-4e8c-9dd5-4bf5d2919515" />
 
 ## Soal 14
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. IP: 10.15.43.32 3401
