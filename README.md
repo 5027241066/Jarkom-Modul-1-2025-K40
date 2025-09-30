@@ -27,5 +27,5 @@ Kemudian akan muncul pertanyaan baru. "What are the user that successfully logge
 <img width="354 " height="99.48" alt="Screenshot 2025-09-30 010623" src="https://github.com/user-attachments/assets/048eaa28-8e6f-473c-b992-91f5c6b9c497" />
 
 Pada pertanyaan itu saya memeriksa satu per satu setiap tcp.stream. Setelah mencoba selama 45 menit, saya menemukan user yang successfully logged in yaitu `n1enna` dan passwordnya `y4v4nn4_k3m3nt4r1`
-<img width="712" height="392" alt="Screenshot 2025-09-30 011520" src="https://github.com/user-attachments/assets/50e0e9ab-155e-4380-b5cf-0e23d510c1dd" />
-<img width="1919" height="1079" alt="Screenshot 2025-09-30 011456" src="https://github.com/user-attachments/assets/dd6c40af-3335-4edd-b586-bd01e71ce21d" />
+<img width="503" height="277" alt="Screenshot 2025-09-30 011520" src="https://github.com/user-attachments/assets/50e0e9ab-155e-4380-b5cf-0e23d510c1dd" />
+<img width="1357" height="763" alt="Screenshot 2025-09-30 011456" src="https://github.com/user-attachments/assets/dd6c40af-3335-4edd-b586-bd01e71ce21d" />
