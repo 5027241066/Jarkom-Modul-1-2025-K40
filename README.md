@@ -132,6 +132,23 @@ Untuk menjawab soal, kita dapat menggunakan fitur dari netcat dengan command “
 
 Diketahui bahwa 3 port yang diberikan saat ini dalam keadaaan tertutup.
 
+## Soal 13
+Pertama kita download terlebih dahulu SSH server menggunakan command “apt-get update && apt-get install -y openssh-server” di terminal eru. Untuk melihat secara live perbedaan wireshark, kita pergi ke aplikasi gns3 dan lakukan capture dari link yang menyambungkan client varda dengan switch2. Selanjutnya kita bisa pergi ke terminal varda dan menjalankan command “ssh ainur@192.231.2.1” dengan ini varda dapat login ke user ainur dan memasukkan password seperti berikut:
+
+<img width="1418" height="346" alt="Image" src="https://github.com/user-attachments/assets/3c266551-636b-4a3a-a287-566c1581cc04" />
+
+Selanjutnya kita melakukan capture pada sesi wireshark seperti berikut (contoh):
+
+<img width="1023" height="392" alt="Image" src="https://github.com/user-attachments/assets/6b3dd608-b21b-48ec-baf1-639e88bccaef" />
+
+<img width="1023" height="390" alt="Image" src="https://github.com/user-attachments/assets/e0992c00-bf4a-4c83-af33-9cc0a9c8dce3" />
+
+Untuk melihat secara langsung apakah ssh mengenkripsi input dengan baik dan melihat perbedaannya dengan telnet, kita dapat memilih salah satu paket yang memiliki tulisan “encrypted packet” dan mengklik kanan paket tersebut dan melakukan follow tcp stream seperti foto berikut, disini kita memilih paket 67:
+
+<img width="1272" height="836" alt="Image" src="https://github.com/user-attachments/assets/21ebd390-a7ce-431e-803f-68eb82460b4f" />
+
+Disini terlihat jelas kalau enkripsi dari SSH Shell itu lebih baik jika dibandingkan telnet yang secara langsung memberikan output keystrokes dari user.
+
 ## Soal 14
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. IP: 10.15.43.32 3401
 
