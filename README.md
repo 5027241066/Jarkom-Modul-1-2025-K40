@@ -86,7 +86,51 @@ Gunakan filter “ftp” untuk melihat proses yang terjadi di lingkungan ftp saj
 
 <img width="1243" height="387" alt="Image" src="https://github.com/user-attachments/assets/303acd02-1e23-498f-b14e-9baa53d06470" />
 
+## Soal 9
+Di terminal eru, Pertama kita akan mengubah permission user ainur dengan menggunakan command “chmod a-w /srv/ftp/shared” agar user ini hanya bisa read-only. Slanjutnya kita dapat menjalankan command: “echo "teks panjang (contoh)" > /srv/ftp/shared/kitab_penciptaan.txt agar nanti terminal manwe dapat mengaksesnya.
 
+Di terminal manwe, login dengan command “ftp 192.231.1.1” dan gunakan command “get kitab_penciptaan.txt” untuk mendapatkan filenya dan kita bisa melihat langsung perbedaannya di wireshark:
+
+<img width="1230" height="266" alt="Image" src="https://github.com/user-attachments/assets/a5468a3a-188b-46f0-929b-fe0c5fdf4c3d" />
+
+Disini dapat dilihat kalau user ainur melakukan request dan mendapatkan file txt tersebut.
+
+SElanjutnya pengujian read-only, kita akan mencobanya di terminal manwe, buat dulu file random, disini kita pakai .txt dengan command:
+```
+echo "ini buat ngejawab soal9" > soal9.txt
+```
+Lalu login lagi ke ftp sebagai ainur dan coba gunakan command “put soal9.txt”, hasilnya akan menjadi seperti:
+
+<img width="1233" height="272" alt="Image" src="https://github.com/user-attachments/assets/ffee98a8-5016-4912-bfd1-0376e52572d8" />
+
+Disini dapat dibuktikan kalau user ainur tidak memiliki permission “writE”
+
+## Soal 10
+Untuk melakukan serangan ini, kita ke terminal melkor dan run command “ping -c 100 -i 0.2 192.231.1.1” untuk melakukan ping sebanyak 100 kali setiap 0.2 detik dengan output:
+
+<img width="1241" height="276" alt="Image" src="https://github.com/user-attachments/assets/85cd31ca-af7a-4c0b-a707-7526683830b8" />
+
+Disini ternyata tidak terjadi packet loss dengan average round trip timenya yaitu 0.3 ms yang berarti kinerja Eru tidak terganggu atau tidak begitu berdampak ke Eru itu sendiri.
+
+## Soal 11
+Disini, kita dapat melakukan command “telnet 192.231.1.2” dan melakukan beberapa command seperti “pwd”, “whoami” dsb. Disini karena telnet di terminal eru tidak bisa, kita bisa melihatnya langsung melalui wireshark seperti:
+
+<img width="1238" height="281" alt="Image" src="https://github.com/user-attachments/assets/bc6e8542-3fd4-417d-8e3c-7ebbce831250" />
+
+Kalau kita coba follow pada paket yang terdapat “bytes data” seperti 300  dan 302 akan muncul output seperti ini:
+
+<img width="1151" height="477" alt="Image" src="https://github.com/user-attachments/assets/667ef87b-f6df-405c-bd85-404141e0dbbf" />
+
+Dalam kata lain, hasilnya merekonstruksi seluruh percakapan dan secara jelas menunjukkan semua perintah yang diketik (whoami, ls -l, pwd) sebagai plain text (teks biasa) tanpa enkripsi sama sekali.
+
+Disini terbukti kalau seluruh sesi telnet, termasuk semua perintah yang dijalankan, dapat dengan mudah diintip oleh siapa pun yang memantau jaringan.
+
+## Soal 12
+Untuk menjawab soal, kita dapat menggunakan fitur dari netcat dengan command “nc -zv 192.231.1.2 21” untuk port 21, “nc -zv 192.231.1.2 80” untuk port 80, dan seterusnya seperti foto berikut:
+
+<img width="1244" height="252" alt="Image" src="https://github.com/user-attachments/assets/5ecef14d-e26f-471a-81a3-aea643c7509a" />
+
+Diketahui bahwa 3 port yang diberikan saat ini dalam keadaaan tertutup.
 
 ## Soal 14
 Setelah gagal mengakses FTP, Melkor melancarkan serangan brute force terhadap  Manwe. Analisis file capture yang disediakan dan identifikasi upaya brute force Melkor. IP: 10.15.43.32 3401
