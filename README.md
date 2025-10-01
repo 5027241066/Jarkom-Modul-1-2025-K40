@@ -185,8 +185,9 @@ Setelah melakukan analisis format pada credential tersebut, saya menemukan
 <img width="614" height="212" alt="Screenshot 2025-09-30 013841" src="https://github.com/user-attachments/assets/7725dc54-6271-4334-96b2-ae600a433a32" />
 
 Setelah saya submit, saya mendapatkan flag
-**KOMJAR25{Brut3_F0rc3_mpZCV3bIHooBLrXAsFDPb1FgB}**
-
+```
+KOMJAR25{Brut3_F0rc3_mpZCV3bIHooBLrXAsFDPb1FgB}
+```
 <img width="925" height="94" alt="image" src="https://github.com/user-attachments/assets/82256dd0-1594-427d-a579-64fb26768064" />
 
 
@@ -218,8 +219,9 @@ Dari plaintext sebelumnya saya convert menggunakan BASE64 yang outputnya seperti
 <img width="990" height="97" alt="Screenshot 2025-09-30 151119" src="https://github.com/user-attachments/assets/955d9cde-47f9-4519-ab80-78062f245b0f" />
 
 Setelah di submit saya mendapatkan flag berikut
-**KOMJAR25{K3yb0ard_W4rr10r_G1esN3Sb9Oi1BgIaiTFgoHEA8}**
-
+```
+KOMJAR25{K3yb0ard_W4rr10r_G1esN3Sb9Oi1BgIaiTFgoHEA8}
+```
 
 ## Soal 16
 Untuk soal nomor 16, ditemukan soal berikut
@@ -259,4 +261,38 @@ Setelah itu saya masukkan pada ip untuk hasil bashnya dan mendapatkan flag seper
 
 <img width="1066" height="759" alt="image" src="https://github.com/user-attachments/assets/c71f94ed-f270-43d1-889d-91c042ccd35a" />
 
-**Congratulations! Here is your flag: KOMJAR25{Y0u_4r3_4_g00d_4nalyz3r_k8zuJCGZKF9u4N9JTPxMyZO0a}**
+```
+Congratulations! Here is your flag: KOMJAR25{Y0u_4r3_4_g00d_4nalyz3r_k8zuJCGZKF9u4N9JTPxMyZO0a}
+```
+
+## Soal 17
+Terdapat soal pertama yaitu "What is the name of the first suspicious file?"
+Pertama tama saya mencoba filter untuk file .exe pada wireshark
+
+<img width="1247" height="111" alt="image" src="https://github.com/user-attachments/assets/32bb6194-9429-4411-a316-c512ce058b25" />
+
+Terdapat satu file yaitu knr.exe, saya coba input pada soal namun hasil disebutkan salah. Kemudian saya mencoba memeriksa adanya file lain melalui http protocol, ketika ingin saya export terlihat ada 3 file.
+
+<img width="906" height="170" alt="image" src="https://github.com/user-attachments/assets/70f46a86-cf74-46fe-94ea-47c4ea403f79" />
+
+Setelah saya coba input pada soal, jawaban yang benar adalah `Invoice&MSO-Request.doc`
+
+<img width="436" height="297" alt="image" src="https://github.com/user-attachments/assets/8e4651f2-2f71-44ab-ae4f-cb3f68d34f88" />
+
+
+Soal berikutnya adalah "What is the name of the second suspicious file?"
+Saya menjawab `knr.exe` dan jawaban benar.
+
+<img width="433" height="63" alt="image" src="https://github.com/user-attachments/assets/5fe984c8-f5d1-48a2-bb0c-b379fb156c44" />
+
+Soal berikutnya adalah "What is the hash of the second suspicious file (knr.exe)?"
+Untuk soal ini, saya mengerjakan sama seperti pada soal sebelumnya. Pertama tama saya export file tersebut lalu menggunakan command `sha256sum <file>` pada linux dan output sebagai berikut.
+
+<img width="821" height="85" alt="image" src="https://github.com/user-attachments/assets/e939f63e-e99f-4f3d-8c23-f8f2220db238" />
+
+<img width="801" height="92" alt="image" src="https://github.com/user-attachments/assets/22cc5424-ff60-4a5b-a3a5-f5310b9ceecf" />
+
+Flag yang saya dapatkan adalah
+```
+Congratulations! Here is your flag: KOMJAR25{M4ster_4n4lyzer_OlM7sqeOjCN6gcU4d44PMdzOD}
+```
