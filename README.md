@@ -113,7 +113,7 @@ Untuk melakukan serangan ini, kita ke terminal melkor dan run command “ping -c
 Disini ternyata tidak terjadi packet loss dengan average round trip timenya yaitu 0.3 ms yang berarti kinerja Eru tidak terganggu atau tidak begitu berdampak ke Eru itu sendiri.
 
 ## Soal 11
-Disini, kita dapat melakukan command “telnet 192.231.1.2” dan melakukan beberapa command seperti “pwd”, “whoami” dsb. Disini karena telnet di terminal eru tidak bisa, kita bisa melihatnya langsung melalui wireshark seperti:
+Disini, kita dapat melakukan command “telnet 192.231.1.2” dan melakukan beberapa command seperti “pwd”, “whoami” dsb. Tampilan di wireshark akan menjadi seperti berikut:
 
 <img width="1238" height="281" alt="Image" src="https://github.com/user-attachments/assets/bc6e8542-3fd4-417d-8e3c-7ebbce831250" />
 
