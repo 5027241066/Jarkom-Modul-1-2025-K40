@@ -220,3 +220,43 @@ Dari plaintext sebelumnya saya convert menggunakan BASE64 yang outputnya seperti
 Setelah di submit saya mendapatkan flag berikut
 **KOMJAR25{K3yb0ard_W4rr10r_G1esN3Sb9Oi1BgIaiTFgoHEA8}**
 
+
+## Soal 16
+Untuk soal nomor 16, ditemukan soal berikut
+
+<img width="673" height="281" alt="Screenshot 2025-09-30 103615" src="https://github.com/user-attachments/assets/514ce5e8-d0df-4a48-8a35-311a7f22e2cc" />
+
+Melalui file yang didapatkan, kita dapat memeriksa FTP Protocol dan memeriksa info pada tiap packets. Saya menemukan pada FTP Protocol bagian bawah untuk user dan pass.
+
+<img width="1919" height="108" alt="Screenshot 2025-09-30 103756" src="https://github.com/user-attachments/assets/a7feb0c5-b7a8-4dd7-a07b-7cbe637b0fc7" />
+<img width="710" height="404" alt="Screenshot 2025-09-30 103812" src="https://github.com/user-attachments/assets/744177e8-2e04-4b35-ae5f-b39cfbabb81d" />
+
+Kemudian akan muncul soal baru yaitu
+
+<img width="723" height="94" alt="Screenshot 2025-09-30 104320" src="https://github.com/user-attachments/assets/079fd268-3f57-4b27-bb23-c62917f6e254" />
+
+Kemudian saya menemukan pada protocol FTP-Data terdapat 5 jenis file yaitu
+t.exe, r.exe, e.exe,  w.exe, q.exe
+
+<img width="1437" height="124" alt="Screenshot 2025-09-30 104512" src="https://github.com/user-attachments/assets/e95221b6-7038-46b4-b2e7-50a06835f04b" />
+<img width="1426" height="125" alt="Screenshot 2025-09-30 104544" src="https://github.com/user-attachments/assets/bdeb84b1-a406-487c-8565-cc82f72c51dd" />
+<img width="1423" height="103" alt="Screenshot 2025-09-30 104607" src="https://github.com/user-attachments/assets/583bcdcd-4b50-4c38-8796-556b903933b0" />
+<img width="1423" height="100" alt="Screenshot 2025-09-30 104622" src="https://github.com/user-attachments/assets/d842e8f0-6df2-4135-9d60-5f623827e1ee" />
+<img width="1424" height="99" alt="Screenshot 2025-09-30 104642" src="https://github.com/user-attachments/assets/30f9a191-272a-4e99-9083-c34fefa41f72" />
+<img width="575" height="70" alt="image" src="https://github.com/user-attachments/assets/57564993-6a19-4c43-96e1-55f3df8404cc" />
+
+Kemudian muncul soal berikutnya untuk menemukan hash dari tiap file
+
+<img width="607" height="93" alt="Screenshot 2025-09-30 110148" src="https://github.com/user-attachments/assets/32e737b3-b7bf-4f9c-8824-199fd8ba0463" />
+
+Cara untuk menemukan hash, pertama saya follow protocol tiap file kemudian save file as raw file.
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/15814a7c-1881-42af-87ae-a9dc89d850cc" />
+Setelah itu saya move file ke Kali Linux dan kemudian membuka file menggunakan `sha256 sum <file>`
+
+<img width="760" height="175" alt="image" src="https://github.com/user-attachments/assets/a6036376-636c-4d49-8373-2ddb5356e832" />
+
+Setelah itu saya masukkan pada ip untuk hasil bashnya dan mendapatkan flag seperti berikut
+
+<img width="1066" height="759" alt="image" src="https://github.com/user-attachments/assets/c71f94ed-f270-43d1-889d-91c042ccd35a" />
+
+**Congratulations! Here is your flag: KOMJAR25{Y0u_4r3_4_g00d_4nalyz3r_k8zuJCGZKF9u4N9JTPxMyZO0a}**
