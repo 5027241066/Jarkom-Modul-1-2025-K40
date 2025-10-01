@@ -168,3 +168,55 @@ Kemudian akan muncul pertanyaan baru. "What are the user that successfully logge
 Pada pertanyaan itu saya memeriksa satu per satu setiap tcp.stream. Setelah mencoba selama 45 menit, saya menemukan user yang successfully logged in yaitu `n1enna` dan passwordnya `y4v4nn4_k3m3nt4r1`
 <img width="503" height="277" alt="Screenshot 2025-09-30 011520" src="https://github.com/user-attachments/assets/50e0e9ab-155e-4380-b5cf-0e23d510c1dd" />
 <img width="1357" height="763" alt="Screenshot 2025-09-30 011456" src="https://github.com/user-attachments/assets/dd6c40af-3335-4edd-b586-bd01e71ce21d" />
+
+Kemudian muncul soal berikutnya
+
+<img width="495" height="69" alt="image" src="https://github.com/user-attachments/assets/491fe8f7-065a-4753-ba7a-d71c35549107" />
+
+Saya menjawab 41824 karena saya menemukan user yang berhasil login pada tcp.stream tersebut.
+
+Kemudian muncul soal baru
+
+<img width="410" height="73" alt="image" src="https://github.com/user-attachments/assets/67d5aff0-ad05-4b43-98e8-8aadca69e7f6" />
+
+Setelah melakukan analisis format pada credential tersebut, saya menemukan 
+`User-Agent: Fuzz Faster U Fool v2.1.0-dev`
+
+<img width="614" height="212" alt="Screenshot 2025-09-30 013841" src="https://github.com/user-attachments/assets/7725dc54-6271-4334-96b2-ae600a433a32" />
+
+Setelah saya submit, saya mendapatkan flag
+**KOMJAR25{Brut3_F0rc3_mpZCV3bIHooBLrXAsFDPb1FgB}**
+
+<img width="925" height="94" alt="image" src="https://github.com/user-attachments/assets/82256dd0-1594-427d-a579-64fb26768064" />
+
+
+## Soal 15
+Ketika menghubungkan ke ip yang diberikan, akan muncul pertanyaan "What device does Melkor use"
+
+<img width="486" height="219" alt="image" src="https://github.com/user-attachments/assets/031c8396-415d-4d6b-a795-f97015ca6817" />
+
+Berdasarkan informasi yang saya dapatkan dari packets 2, saya menemukan idVendor, idProduct, iManufacturer, dan iProduct yang kemudian saya masukan ke ChatGPT untuk identifikasi device. Output yang diberikan oleh AI adalah Keyboard. Device Keyboard yang didukung oleh penemuan pada packet berikutnya yaitu pada packet 16.
+
+<img width="594" height="215" alt="Screenshot 2025-09-30 134648" src="https://github.com/user-attachments/assets/765f3363-3182-4eb5-ade7-ee19547e3029" />
+
+<img width="392" height="99" alt="Screenshot 2025-09-30 135108" src="https://github.com/user-attachments/assets/78e67284-efdd-4e06-bace-d998941abc59" />
+
+Soal berikutnya adalah "What did Melkor write?"
+Kita perlu memeriksa apa yang dituliskan oleh Melkor, saya melakukan export as txt dari pcapng, kemudian saya convert hanya mengambil hid code.
+<img width="947" height="299" alt="Screenshot 2025-09-30 142632" src="https://github.com/user-attachments/assets/e99ed84a-8f6f-4d20-ad56-eba2049c733c" />
+<img width="221" height="221" alt="Screenshot 2025-09-30 145135" src="https://github.com/user-attachments/assets/a17c7067-a9fe-4463-b506-2a186b61b083" />
+
+Didapatkan hex code tersebut yang kemudian saya convert menjadi plain text BASE64 seperti berikut. 
+
+<img width="608" height="85" alt="Screenshot 2025-09-30 151111" src="https://github.com/user-attachments/assets/b40f54a1-ddd0-4a53-be13-a5a689edf65b" />
+`UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=`
+
+Setelah di submit akan muncul pertanyaan berikutnya yaitu "What is Melkor's secret message?"
+Dari plaintext sebelumnya saya convert menggunakan BASE64 yang outputnya seperti berikut
+
+<img width="1208" height="567" alt="Screenshot 2025-09-30 151036" src="https://github.com/user-attachments/assets/f7f5e987-df84-420f-90cc-29dcd8840d37" />
+<img width="990" height="97" alt="Screenshot 2025-09-30 151119" src="https://github.com/user-attachments/assets/955d9cde-47f9-4519-ab80-78062f245b0f" />
+
+Setelah di submit saya mendapatkan flag berikut
+**KOMJAR25{K3yb0ard_W4rr10r_G1esN3Sb9Oi1BgIaiTFgoHEA8}**
+
