@@ -296,3 +296,107 @@ Flag yang saya dapatkan adalah
 ```
 Congratulations! Here is your flag: KOMJAR25{M4ster_4n4lyzer_OlM7sqeOjCN6gcU4d44PMdzOD}
 ```
+
+## Soal 18
+Pertama saya mendapatkan soal "How many files are suspected of containing malware?"
+Sama seperti pada soal sebelumnya, saya memeriksa export dan menemukan 2 files suspected karena formatnya aneh.
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/259d1eef-54ac-4c59-878e-c33f2bc97fe1" />
+
+Kemudian soal berikutnya adalah "What is the name of the first malicious file?"
+dari list export tersebut bisa terlihat ada 2 yaitu
+- `\WINDOWS\d0p2nc6ka3f.fixh0lhyg4voyfcy_smc2ho_u083urjpphnwlahjwhv_o5c0vf6.exe`
+- `\WINDOWS\oiku9bu68cxqenfmcso2aek6t07_guuisqxlnliv8dx2eemqdnhvhyl46l8n.di.exe`
+
+Kemudian saya input pada ip untuk file pertama adalah 
+`
+d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe
+`
+
+<img width="985" height="101" alt="image" src="https://github.com/user-attachments/assets/846d7321-9c70-4f29-a2b8-d481cc8df35b" />
+
+Muncul soal berikutnya yaitu "Apa nama file berbahaya yang kedua"
+Saya input 
+`
+oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe
+`
+
+<img width="997" height="88" alt="image" src="https://github.com/user-attachments/assets/f3c7eb10-2a7d-48a1-bb17-d77d0f29dd15" />
+
+Soal selanjutnya adalah mencari hash dari file pertama dan kedua
+
+<img width="1696" height="264" alt="image" src="https://github.com/user-attachments/assets/16ee0199-ccdf-4f8a-a41a-024bd52f0fff" />
+
+<img width="1236" height="237" alt="Screenshot 2025-10-04 194951" src="https://github.com/user-attachments/assets/7d03a651-d88b-41d2-b3bd-f02e282d0714" />
+
+
+Kemudian saya mendapatkan flag
+`
+Congratulations! Here is your flag: KOMJAR25{Y0u_4re_g0dl1ke_IeMfb0VRzphjLw0RoMacwntOZ}
+`
+
+## Soal 19
+Soal pertama adalah "Who sent the threatening message?"
+
+Untuk menemukan sender saya mencari user yang berhasil melakukan login
+
+<img width="1919" height="108" alt="image" src="https://github.com/user-attachments/assets/5a68f78c-559e-49ca-be8f-618af6389824" />
+
+<img width="1919" height="1079" alt="Screenshot 2025-10-04 195433" src="https://github.com/user-attachments/assets/b2bbf4fb-a048-4df9-833c-8bfd1425a2e8" />
+
+disini terlihat sender adalah Your Life
+`
+From: Your Life<YourLife36@7162.com>
+`
+
+<img width="611" height="294" alt="image" src="https://github.com/user-attachments/assets/4a34f5fa-ce01-4f58-954a-4667233fcb92" />
+
+
+Soal berikutnya adalah "How much ransom did the attacker demand ($)?"
+
+<img width="1232" height="458" alt="image" src="https://github.com/user-attachments/assets/87edfb49-48b0-4d53-ace8-198c4e6269f8" />
+
+disini terlihat attacker meminta $1600 BTC
+
+<img width="628" height="105" alt="image" src="https://github.com/user-attachments/assets/ad93a701-0de1-419a-a2cb-d44c96a48304" />
+
+Pada soal berikutnya ditanya "What is the attacker's bitcoin wallet?"
+Terlihat pada screenshot sebelumnya bitcoin wallet attacker adalah
+`
+1CWHmuF8dHt7HBGx5RKKLgg9QA2GmE3UyL
+`
+
+<img width="1268" height="542" alt="image" src="https://github.com/user-attachments/assets/9d8c55cf-7597-4c0c-bcdc-a801afea348e" />
+
+Saya menemukan flag 
+`
+Congratulations! Here is your flag: KOMJAR25{Y0u_4re_J4rk0m_G0d_VZx4WtZCDd8OchMq8iAHyryhD}
+`
+
+## Soal 20
+Soal pertama adalah "What encryption method is used?"
+Ketika sory by protocol akan terlihat encryption menggunakan TLS v1.2
+
+<img width="1919" height="656" alt="image" src="https://github.com/user-attachments/assets/289c08ec-2339-46f0-aefb-906a238a6dba" />
+
+<img width="452" height="97" alt="image" src="https://github.com/user-attachments/assets/5f2c4f5a-2e4c-4bc8-8540-92ee6ab6d740" />
+
+Soal berikutnya adalah "What is the name of the malicious file placed by the attacker?"
+
+Ketika cek export http saya menemukan 2 file yaitu invest_20.dll dan docs.php
+
+<img width="1919" height="1045" alt="Screenshot 2025-10-04 200857" src="https://github.com/user-attachments/assets/5dd0a2fe-3f32-4922-a859-7deac7b7e575" />
+
+<img width="878" height="94" alt="image" src="https://github.com/user-attachments/assets/354a390d-eebf-469e-bd04-47e10a08d29f" />
+
+Soal berikutnya adalah "What is the hash of the file containing the malware?"
+Sama seperti sebelumnya saya menggunakan `sha256sum`
+
+<img width="1129" height="113" alt="image" src="https://github.com/user-attachments/assets/ef7574ef-ff46-4f2d-99e5-f34bd5c619d8" />
+
+<img width="1261" height="126" alt="image" src="https://github.com/user-attachments/assets/1ade3a83-d757-476e-a562-e355c2f86d0b" />
+
+Saya mendapatkan flag 
+`
+Congratulations! Here is your flag: KOMJAR25{B3ware_0f_M4lw4re_9vAqRb3l7D6LnJ8DM0iPIibHr}
+`
